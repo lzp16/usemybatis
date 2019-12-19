@@ -26,8 +26,8 @@ public class Test {
         //4、获取Mapper接口对象
         UserMapper userMapper = session.getMapper(UserMapper.class);
         //5、操作Mapper接口对象的方法操作数据库
-        List<User> users = userMapper.findAll();
+        User user = userMapper.findById(1);
         //6、业务处理
-        System.out.println(users);
+        System.out.println("name:"+user.getName()+",age:"+user.getAge());
     }
 }
